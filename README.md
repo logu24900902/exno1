@@ -21,22 +21,97 @@ STEP 5: Remove outliers using IQR
 STEP 6: Use zscore of to remove outliers
 
 # Coding and Output
-![Ex im1](https://github.com/user-attachments/assets/dcafe988-72e8-429a-9db1-263976a8d430)
-![Ex im2](https://github.com/user-attachments/assets/15f2ecb9-8e3b-43c3-90e0-ca16455254a6)
-![Ex im3](https://github.com/user-attachments/assets/1b771278-4aba-40f1-a297-3a8695e166fd)
-![Ex im4](https://github.com/user-attachments/assets/4f882022-5f26-49bb-9422-834c99c523b6)
-![Ex im5](https://github.com/user-attachments/assets/3cdaacb5-aa9e-4795-93d7-a05b646956e9)
-![Ex im6](https://github.com/user-attachments/assets/48c637a5-6d8d-491c-9d58-c7d8e31ce679)
-![Ex im7](https://github.com/user-attachments/assets/3ca08125-d7ac-4de0-82d1-4c9e241a9f86)
-![Ex im8](https://github.com/user-attachments/assets/06aaa585-b333-451e-8d89-3c19538be3af)
-![Ex im9](https://github.com/user-attachments/assets/523b70e0-ee40-4d6d-ba5d-3a78dd7186f5)
-![Ex im10](https://github.com/user-attachments/assets/aef1e1da-6be3-4f26-9c4c-c02b751c602c)
-![Ex im11](https://github.com/user-attachments/assets/29b5e664-27a4-4f94-a5f1-5747f86799b2)
-![Ex im12](https://github.com/user-attachments/assets/141a59db-a165-4686-9a85-f6a249fa3ea3)
-![Ex im13](https://github.com/user-attachments/assets/379772b6-4cbd-4f8b-b1cb-7e838a4b9309)
-![Ex im14](https://github.com/user-attachments/assets/67ba4337-ca7c-43c8-874c-3ae70902e31b)
-![Ex im15](https://github.com/user-attachments/assets/37726b99-4700-4161-921a-0e0bdd031a4c)
-![Ex im16](https://github.com/user-attachments/assets/14dea158-4351-490f-8991-e71770ca1008)
+```
+import pandas as pd
+df=pd.read_csv("/content/SAMPLEIDS.csv")
+```
+```
+df
+```
+![image](https://github.com/user-attachments/assets/1851cba8-5668-46c5-b2a7-58f2f5acf9f7)
+
+```
+df.shape
+```
+(21, 12)
+
+```
+df.describe()
+```
+![image](https://github.com/user-attachments/assets/e9260436-813d-4fd9-bafc-16c99e1d0242)
+```
+df.info()
+```
+![image](https://github.com/user-attachments/assets/71c14613-8cfe-4d93-b8c7-332b357a84e6)
+```
+df.head(10)
+```
+![image](https://github.com/user-attachments/assets/c2da3024-d9dc-4a50-bb47-68d16ea49fcc)
+
+```
+df.tail(10)
+```
+![image](https://github.com/user-attachments/assets/bf98a7de-6771-4896-833b-b0cea0f4e271)
+
+```
+df.isna().sum()
+```
+![image](https://github.com/user-attachments/assets/6815d05d-9e0d-4d76-b306-a1150cb98d3d)
+
+```
+df.dropna(how='any').shape
+```
+(13, 12)
+
+```
+df.shape
+```
+(21, 12)
+
+```
+x=df.dropna(how='any')
+x
+```
+![image](https://github.com/user-attachments/assets/6cf22cdd-9d7e-4adb-8e20-e59776d292d5)
+
+```
+mn=df.TOTAL.mean()
+mn
+```
+![image](https://github.com/user-attachments/assets/528860cd-8b01-4687-9dc2-22d6c89a1c62)
+
+```
+df.TOTAL.fillna(mn,inplace=True)
+df
+```
+
+![image](https://github.com/user-attachments/assets/57b388bf-3227-4815-8892-200cceaee871)
+
+```
+df.isnull().sum()
+```
+![image](https://github.com/user-attachments/assets/4060aa41-a1fd-4eb7-bec3-7f632eb795f2)
+```
+df.M1.fillna(method='ffill',inplace=True)
+df
+```
+![image](https://github.com/user-attachments/assets/1553b527-25bd-460c-8d1b-881242609750)
+```
+df.isnull().sum()
+```
+![image](https://github.com/user-attachments/assets/b800bc63-dcc8-43a7-9cc8-d67c93b1baff)
+
+
+
+
+
+
+
+
+
+
+
+
 
 # Result
 Thus the program executed successfully          

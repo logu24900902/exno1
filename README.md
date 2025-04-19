@@ -1,5 +1,5 @@
-# Exno:1
-Data Cleaning Process
+## Ex 01
+## Data Cleaning Process
 
 # AIM
 To read the given data and perform data cleaning and save the cleaned data to a file.
@@ -39,4 +39,4 @@ STEP 6: Use zscore of to remove outliers
 ![Ex im16](https://github.com/user-attachments/assets/14dea158-4351-490f-8991-e71770ca1008)
 
 # Result
-            Thus the program executed successfully
+Thus the program executed successfully          

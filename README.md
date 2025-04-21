@@ -22,8 +22,8 @@ STEP 6: Use zscore of to remove outliers
 
 # Coding and Output
 ```
- REG NO : 212224230141
- NAME : LOGU R
+         REG NO : 212224230141
+         NAME : LOGU R
 import pandas as pd
 df=pd.read_csv("/content/SAMPLEIDS.csv")
 df

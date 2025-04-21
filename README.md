@@ -24,11 +24,8 @@ STEP 6: Use zscore of to remove outliers
 ```
  REG NO : 212224230141
  NAME : LOGU R
-```
 import pandas as pd
 df=pd.read_csv("/content/SAMPLEIDS.csv")
-```
-```
 df
 ```
 ![image](https://github.com/user-attachments/assets/1851cba8-5668-46c5-b2a7-58f2f5acf9f7)

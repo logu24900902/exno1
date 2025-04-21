@@ -1,4 +1,4 @@
-## Ex 01
+# EX  01
 ## Data Cleaning Process
 
 # AIM
